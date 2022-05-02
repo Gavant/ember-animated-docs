@@ -5,7 +5,7 @@
     "keywords": [
         "ember-addon"
     ],
-    "repository": "https://github.com/Gavant/ember-animated-docs.git",
+    "repository": "git@github.com:Gavant/ember-animated-docs.git",
     "license": "MIT",
     "author": "",
     "directories": {
