@@ -108,7 +108,7 @@
         "@embroider/core": "1.6.0",
         "@embroider/macros": "1.6.0",
         "@embroider/shared-internals": "1.6.0",
-        "@embroider/util": "1.6.0",
+        "@embroider/util": "1.6.0"
     },
     "engines": {
         "node": "12.* || 14.* || >= 16"
