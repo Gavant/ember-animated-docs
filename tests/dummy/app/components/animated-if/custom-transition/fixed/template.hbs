@@ -1,0 +1,20 @@
+<DocsDemo as |demo|>
+    <demo.example @name="animated-if-custom-transition-fixed.hbs">
+        <button
+            class="btn btn-primary"
+            {{on "click" (fn this.toggleItemVisible (not this.itemVisible))}}
+            type="button"
+        >Click Me!</button>
+        <div class="mt-3">
+            <AnimatedContainer>
+                {{#animated-if this.itemVisible use=this.customTransition duration=750}}
+                    <div>Lorem ipsum genie magic!</div>
+                {{else}}
+                    <div>Watch me animate!</div>
+                {{/animated-if}}
+            </AnimatedContainer>
+        </div>
+    </demo.example>
+    <demo.snippet @name="animated-if-custom-transition-fixed.hbs" />
+    <demo.snippet @name="animated-if-custom-transition-fixed.ts" @label="script.ts" />
+</DocsDemo>

@@ -1,0 +1,12 @@
+<DocsDemo as |demo|>
+    <demo.example @name="animated-if-basic.hbs">
+        <button class="btn btn-primary" {{on "click" this.toggleItemVisible}} type="button">Click Me!</button>
+        <AnimatedContainer>
+            {{#animated-if this.itemVisible use=this.transition duration=700}}
+                <div class="py-3">Watch me animate!</div>
+            {{/animated-if}}
+        </AnimatedContainer>
+    </demo.example>
+    <demo.snippet @name="animated-if-basic.hbs" />
+    <demo.snippet @name="animated-if-basic.ts" @label="script.ts" />
+</DocsDemo>

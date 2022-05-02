@@ -1,0 +1,19 @@
+<DocsDemo as |demo|>
+    <demo.example @name="animated-each-ios-reorder.hbs">
+        <AnimatedContainer class="d-flex flex-wrap p-3 w-100 overflow-hidden">
+            {{#animated-each this.items use=this.transition duration=800 as |item indx|}}
+                <div class="p-2">
+                    <div
+                        class="card ios-block shadow-lg bg-{{item.color}}"
+                        role="button"
+                        {{on "click" (fn this.removeItem indx)}}
+                    >
+                        <div>{{item.label}}</div>
+                    </div>
+                </div>
+            {{/animated-each}}
+        </AnimatedContainer>
+    </demo.example>
+    <demo.snippet @name="animated-each-ios-reorder.hbs" />
+    <demo.snippet @name="animated-each-ios-reorder.ts" @label="script.ts" />
+</DocsDemo>

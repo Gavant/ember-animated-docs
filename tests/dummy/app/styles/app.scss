@@ -1,0 +1,64 @@
+$primary: #07689f;
+$secondary: #c9d6df;
+$success: #11d3bc;
+$danger: #f67280;
+$info: #a2d5f2;
+$warning: #ff7e67;
+$light: #fafafa;
+$dark: #4e4e4e;
+
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+body.ember-application {
+    background-color: #fff;
+}
+
+:root {
+    --brand-primary: #285a92;
+}
+
+.docs {
+    &-bg-brand {
+        .docs-max-w-sm {
+            max-width: none;
+        }
+    }
+}
+
+.index-demo {
+    max-width: 37rem;
+    min-width: 37rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+
+    .demo-text {
+        margin: 1rem 1rem;
+    }
+}
+
+blockquote.docs-md__blockquote {
+    p {
+        font-weight: bold;
+        color: black;
+    }
+}
+
+.ios-block {
+    height: 150px;
+    width: 150px;
+    div {
+        margin: auto;
+        color: #fff;
+        font-weight: bold;
+    }
+}
+
+nav.AddonDocs-DocsViewer-CurrentPageIndex {
+    width: 300px !important;
+    padding-right: 0 !important;
+}
+
+div.AddonDocs-DocsViewer-Nav {
+    width: 300px !important;
+    padding-left: 0 !important;
+}

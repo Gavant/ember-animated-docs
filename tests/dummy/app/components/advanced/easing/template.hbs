@@ -1,0 +1,23 @@
+<DocsDemo as |demo|>
+    <ul class="list-unstyled p-3">
+        {{#each this.easingOptions as |opt|}}
+            <div class="form-check" {{on "click" (fn this.selectEasing opt)}}>
+                <input class="form-check-input" type="radio" checked={{eq this.easeOption.label opt.label}} />
+                <label class="form-check-label">
+                    {{opt.label}}
+                </label>
+            </div>
+        {{/each}}
+    </ul>
+    <button class="btn btn-primary mb-3 ms-3" {{on "click" this.animate}} type="button">Animate</button>
+    <demo.example @name="advanced-easing.hbs">
+        <AnimatedContainer class="p-2 overflow-hidden">
+            {{#animated-value this.word use=this.transition duration=600 as |value|}}
+                <p>{{value}}</p>
+            {{/animated-value}}
+        </AnimatedContainer>
+    </demo.example>
+    <demo.snippet @name="advanced-easing.hbs" />
+    <demo.snippet @name="advanced-easing.ts" @label="transition.ts" />
+    <demo.snippet @name="advanced-easing-functions.ts" @label="easing-functions.ts" />
+</DocsDemo>

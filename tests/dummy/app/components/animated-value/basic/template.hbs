@@ -1,0 +1,12 @@
+<DocsDemo as |demo|>
+    <demo.example @name="animated-value-basic.hbs">
+        <button class="btn btn-primary mb-3" {{on "click" this.animate}} type="button">Animate</button>
+        <AnimatedContainer class="p-2 overflow-hidden">
+            {{#animated-value this.word use=this.transition duration=600 as |value|}}
+                <p>{{value}}</p>
+            {{/animated-value}}
+        </AnimatedContainer>
+    </demo.example>
+    <demo.snippet @name="animated-value-basic.hbs" />
+    <demo.snippet @name="animated-value-basic.ts" @label="script.ts" />
+</DocsDemo>
