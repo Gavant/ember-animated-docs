@@ -115,6 +115,5 @@
     },
     "volta": {
         "node": "16.14.0"
-    },
-    "homepage": "https://Gavant.github.io/ember-animated-docs"
+    }
 }
