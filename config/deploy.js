@@ -3,10 +3,8 @@
 
 module.exports = function (deployTarget) {
     let ENV = {
-        build: {},
-        git: {
-            repo: 'https://github.com/Gavant/ember-animated-docs'
-        }
+        build: {}
+        // include other plugin configuration that applies to all deploy targets here
     };
 
     if (deployTarget === 'development') {
