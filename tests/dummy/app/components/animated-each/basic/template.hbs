@@ -1,0 +1,21 @@
+<DocsDemo as |demo|>
+    <demo.example @name="animated-each-basic.hbs">
+        <button class="btn btn-primary mb-3" {{on "click" this.resetItems}} type="button">Reset List</button>
+        <AnimatedContainer class="overflow-hidden">
+            <ul class="list-unstyled w-25">
+                {{#animated-each this.items use=this.transition duration=750 as |item|}}
+                    <li class="card p-2 shadow-sm d-flex flex-row justify-content-between align-items-center">
+                        <div>{{item}}</div>
+                        <button
+                            class="btn btn-link p-1"
+                            {{on "click" (fn this.removeItem item)}}
+                            type="button"
+                        >Remove</button>
+                    </li>
+                {{/animated-each}}
+            </ul>
+        </AnimatedContainer>
+    </demo.example>
+    <demo.snippet @name="animated-each-basic.hbs" />
+    <demo.snippet @name="animated-each-basic.ts" @label="script.ts" />
+</DocsDemo>

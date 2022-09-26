@@ -1,0 +1,21 @@
+<DocsDemo as |demo|>
+    <demo.example @name="animated-value-basic-rules.hbs">
+        <button class="btn btn-primary mb-3" {{on "click" this.addNotification}} type="button">Add Notification</button>
+        <button class="btn btn-primary mb-3" {{on "click" this.removeNotification}} type="button">Remove Notification</button>
+        <AnimatedContainer class="p-2 overflow-hidden">
+            <div class="d-flex flex-row align-items-center">
+                <span>You have</span>
+                <span class="badge bg-danger mx-1">
+                    <AnimatedContainer class="overflow-hidden">
+                        {{#animated-value this.notificationCount rules=this.rules duration=300 as |value|}}
+                            <span>{{value}}</span>
+                        {{/animated-value}}
+                    </AnimatedContainer>
+                </span>
+                <span>notifications.</span>
+            </div>
+        </AnimatedContainer>
+    </demo.example>
+    <demo.snippet @name="animated-value-basic-rules.hbs" />
+    <demo.snippet @name="animated-value-basic-rules.ts" @label="script.ts" />
+</DocsDemo>

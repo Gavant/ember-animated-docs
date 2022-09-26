@@ -1,0 +1,20 @@
+<DocsDemo as |demo|>
+    <demo.example @name="animated-if-interrupted-fixed.hbs">
+        <button class="btn btn-primary" {{on "click" this.toggleItemVisible}} type="button">Click Me!</button>
+        <AnimatedContainer class="mt-3">
+            {{#animated-if this.itemVisible use=this.customTransition duration=1600}}
+                <div>Lorem ipsum genie magic!</div>
+                <div>Lorem ipsum genie magic!</div>
+                <div>Lorem ipsum genie magic!</div>
+                <div>Lorem ipsum genie magic!</div>
+            {{else}}
+                <div>Watch me animate!</div>
+                <div>Time to animate</div>
+                <div>Watch me change</div>
+                <div>Woah such magic</div>
+            {{/animated-if}}
+        </AnimatedContainer>
+    </demo.example>
+    <demo.snippet @name="animated-if-interrupted-fixed.hbs" />
+    <demo.snippet @name="animated-if-interrupted-fixed.ts" @label="script.ts" />
+</DocsDemo>
